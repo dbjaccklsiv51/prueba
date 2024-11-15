@@ -1,0 +1,35 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+
+void tiempo(int totalsegundos,int &horas, int &minutos,int& segundos)
+{
+int auxiliar;
+
+	horas=totalsegundos/3600;//segundos en una hora
+	totalsegundos=totalsegundos % 3600;//se obtendra el residuo
+	minutos=totalsegundos/60;
+	segundos=totalsegundos%60;
+}
+
+int main()
+{
+   int segundTOT, hora, min, seg;
+   
+   cout<<"Ingrrse el total de segundos"<<endl;
+   cin>>segundTOT;
+   
+   tiempo(segundTOT,hora,min,seg);
+
+	cout<<"El tiempo equivalente en cantidad de segundos ingresados es "<<endl;
+	
+	
+	cout<<"El total horas es: "<<hora<<endl;
+	cout<<"El  total minutos es:: "<<min<<endl;
+	cout<<"El  total segudnos es: "<<seg<<endl;
+	
+	return 0;
+}

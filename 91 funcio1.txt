@@ -1,0 +1,27 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+void prueba1(int &num1, int &num2)
+{
+    cout<<" del primer numero es: "<<num1<<endl;
+    cout<<"el segundo numero es: "<<num2<<endl;
+    num1=98;
+    num2=6;
+}
+
+int main()
+{
+ 	int n1,n2;
+ 	cout<<"Ingrese un numero: "<<endl;
+ 	cin>>n1;
+ 	cout<<"ingrese otro numero: "<<endl;
+ 	cin>>n2;
+ 	
+    prueba1(n1,n2);//se llama al procedimiento
+    // y como fueron asignados otros valores se actulizand por referencia
+    cout<<"El nuevo valor es: "<<n1<<endl;
+    cout<<"El nuevo valor es: "<<n2<<endl;
+}

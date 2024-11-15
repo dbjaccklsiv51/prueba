@@ -1,0 +1,26 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+void calculo(int num1, int num2, int &sum, int& prod)
+{
+        sum=num1+num2;
+        prod=num1*num2;
+}
+
+int main()
+{
+
+    int N1,N2,suma=0,prod=0;
+    cout<<"Ingrese el primer numero: "<<endl;
+    cin>>N1;    
+    cout<<"Ingrese el segundo numero"<<endl;
+    cin>>N2;
+
+    calculo(N1,N2,suma,prod);
+
+    cout<<"El valor de la suma es:"<<suma<<endl;
+    cout<<"El valor del producto es:"<<prod<<endl;
+}

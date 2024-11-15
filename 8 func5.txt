@@ -1,0 +1,29 @@
+#include <iostream>
+#include <conio.h>
+#include <string>
+
+using namespace std;
+
+
+void cambiar(int &uno, int &dos)//, los parámetros se pasa por referencia lo que significa que cualquier cambio que se haga dentro de la función afectará a las variables originales)
+{
+int auxiliar;
+
+	auxiliar=uno;
+	uno=dos;
+	dos=auxiliar;
+}
+
+int main()
+{
+   int n1=4, n2=8;
+	cout<<"El valor de n1 es: "<<n1<<endl;
+	cout<<"El valor de n1 es: "<<n2<<endl;
+	
+	cambiar(n1,n2);
+	
+	cout<<"El valor de n1 es: "<<n1<<endl;
+	cout<<"El valor de n1 es: "<<n2<<endl;
+	
+	return 0;
+}
